@@ -8,7 +8,7 @@ namespace TextDocumentSearch.Data
     /// <summary>
     /// Implements all functionality involving the import and export of data to and from text files.
     /// </summary>
-    class TextFileHandler
+    public class TextFileHandler
     {
         /// <summary>
         /// Takes a specified <paramref name="filepath"/> and returns the text contained within that file.

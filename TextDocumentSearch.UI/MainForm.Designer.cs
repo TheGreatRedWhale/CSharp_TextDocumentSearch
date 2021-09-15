@@ -55,6 +55,7 @@
             this.keywordTextBox.Name = "keywordTextBox";
             this.keywordTextBox.Size = new System.Drawing.Size(270, 20);
             this.keywordTextBox.TabIndex = 2;
+            this.keywordTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keywordTextBox_KeyUp);
             // 
             // searchButton
             // 
@@ -64,6 +65,7 @@
             this.searchButton.TabIndex = 4;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // resultsListBox
             // 
@@ -88,6 +90,7 @@
             // 
             this.filepathTextBox.Name = "filepathTextBox";
             this.filepathTextBox.Size = new System.Drawing.Size(400, 25);
+            this.filepathTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.filepathTextBox_KeyUp);
             // 
             // browseButton
             // 
@@ -97,6 +100,7 @@
             this.browseButton.Name = "browseButton";
             this.browseButton.Size = new System.Drawing.Size(58, 22);
             this.browseButton.Text = "Browse...";
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // MainForm
             // 
