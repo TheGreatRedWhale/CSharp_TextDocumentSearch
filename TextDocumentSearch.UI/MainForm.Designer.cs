@@ -36,6 +36,7 @@
             this.topToolStrip = new System.Windows.Forms.ToolStrip();
             this.filepathTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.browseButton = new System.Windows.Forms.ToolStripButton();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.topToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +125,7 @@
         private System.Windows.Forms.ToolStrip topToolStrip;
         private System.Windows.Forms.ToolStripTextBox filepathTextBox;
         private System.Windows.Forms.ToolStripButton browseButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
