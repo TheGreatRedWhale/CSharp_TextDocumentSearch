@@ -21,13 +21,10 @@ namespace TextDocumentSearch.Data
         {
             StreamReader streamReader = File.OpenText(filepath);
             string txt = null;
-            // var lineSeparator = new[] { Environment.NewLine };
-            // var lines = new string[] { };
 
             try
             {
                 txt = streamReader.ReadToEnd();
-                // lines = txt.Split(lineSeparator, StringSplitOptions.RemoveEmptyEntries);
             }
             catch (Exception e)
             {
