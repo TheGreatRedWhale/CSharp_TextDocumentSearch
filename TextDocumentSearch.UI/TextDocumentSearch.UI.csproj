@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextDocumentSearch.Logic\TextDocumentSearch.Logic.csproj">
+      <Project>{a3993734-f430-4b75-b31a-dc06d838c38d}</Project>
+      <Name>TextDocumentSearch.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
