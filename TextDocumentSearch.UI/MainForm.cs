@@ -15,15 +15,13 @@ namespace TextDocumentSearch.UI
 {
     public partial class MainForm : Form
     {
-        string lastFilePath = Directory.GetCurrentDirectory() + "\\Test.txt";
         string[] lines = new string[] { };
 
         public MainForm()
         {
             InitializeComponent();
-            // Set filepathTextBox.Text and openFileDialog.FileName to the default value.
-            filepathTextBox.Text = lastFilePath;
-            openFileDialog.FileName = lastFilePath;
+            // Set openFileDialog.InitialDirectory to the default value.
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         }
 
         // CUSTOM METHODS -----------------------------------------------------
@@ -48,40 +46,11 @@ namespace TextDocumentSearch.UI
             }
         }
 
-        private void CheckValidFile()
-        {
-            try
-            {
-                if (!(Path.GetExtension(filepathTextBox.Text).EndsWith(".txt") || Path.GetExtension(filepathTextBox.Text).EndsWith(".csv")))
-                {
-                    throw new NotSupportedException("Only \'.txt\' and \'.csv\' filetypes are supported.");
-                }
-                else
-                {
-                    lastFilePath = filepathTextBox.Text;
-                }
-            }
-            catch (FileNotFoundException e)
-            {
-                SystemSounds.Exclamation.Play();
-                MessageBox.Show(e.Message, "File Not Found",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                filepathTextBox.Text = lastFilePath;
-            }
-            catch (NotSupportedException e)
-            {
-                SystemSounds.Exclamation.Play();
-                MessageBox.Show(e.Message, "File Type Not Supported",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                filepathTextBox.Text = lastFilePath;
-            }
-        }
-
         // GENERATED METHODS --------------------------------------------------
 
         private void browseButton_Click(object sender, EventArgs e)
         {
-            openFileDialog.FileName = filepathTextBox.Text;
+            // openFileDialog.FileName = filepathTextBox.Text;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Set filepathTextBox.Text to the selected filepath. 
