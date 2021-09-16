@@ -52,7 +52,7 @@ namespace TextDocumentSearch.UI
         {
             try
             {
-                if (!(filepathTextBox.Text.EndsWith(".txt") || filepathTextBox.Text.EndsWith(".csv")))
+                if (!(Path.GetExtension(filepathTextBox.Text).EndsWith(".txt") || Path.GetExtension(filepathTextBox.Text).EndsWith(".csv")))
                 {
                     throw new NotSupportedException("Only \'.txt\' and \'.csv\' filetypes are supported.");
                 }
@@ -107,7 +107,7 @@ namespace TextDocumentSearch.UI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                CheckValidFile();
+                //CheckValidFile();
                 e.Handled = e.SuppressKeyPress = true;
             }
         }

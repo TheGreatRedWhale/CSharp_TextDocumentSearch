@@ -102,6 +102,10 @@
             this.browseButton.Text = "Browse...";
             this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.Filter = "Text files (*.txt)|*.txt|CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
